@@ -1,0 +1,274 @@
+/**index.wxss**/
+.container{
+  padding: 4rpx 2rpx;
+  box-shadow:0px 0rpx 2rpx 2rpx #eee inset;
+}
+map{
+  width: 100%;
+  height: 100%;
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000000;
+  opacity: 0.3;
+  z-index: 1
+}
+/*底部设备信息  */
+
+.bootomView{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 344rpx;
+  overflow: hidden;
+  z-index: 1000;
+}
+.closeBottomBtn{
+  width: 130rpx;
+  height: 80rpx;
+  background: #fff;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -57rpx;
+  border-radius:50%;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 -4rpx 8rpx #eee;
+}
+.closeBottomBtn cover-image{
+  display: block;
+  width: 32rpx;
+  height: 18rpx;
+  margin: 18rpx auto;
+}
+.bootomView .equipment{
+  position: absolute;
+  left: 0;
+  top: 44rpx;
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+}
+.bootomView .equipment-top{
+  width: 100%;
+  height: 130rpx;
+  overflow: hidden;
+  color: #26b6eb;
+  font-size: 24rpx;
+}
+.bootomView .equipment-id{
+  float: left;
+  width: auto;
+  height: 48rpx;
+  border-radius:24rpx;
+  border: 2rpx solid #26b6eb;
+  margin: 32rpx 32rpx 0 30rpx;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  padding: 0 20rpx;
+}
+.bootomView .equipment-net{
+  float: left;
+  width: auto;
+  height: 120rpx;
+  line-height: 116rpx;
+  margin-right: 32rpx;
+}
+.bootomView .equipment-location{
+  float: left;
+  width: auto;
+  height: 120rpx;
+  line-height: 116rpx;
+}
+.bootomView .equipment-energy{
+  float: right;
+  width: auto;
+  overflow: hidden;
+  height: 26rpx;
+  line-height: 26rpx;
+  padding-right: 30rpx;
+  margin-top: 46rpx;
+}
+.bootomView .percent{
+  float: right;
+  width: auto;
+  margin-right: 6rpx;
+}
+.bootomView .energy-box{
+  box-sizing: border-box;
+  float: right;
+  width: 50rpx;
+  height: 26rpx;
+  border: 3rpx solid #ea767e;
+  border-radius:4rpx;
+  padding: 2rpx; 
+}
+.bootomView .energy{
+  width: 80%;
+  height: 100%;
+  background: #ea767e;
+}
+.bootomView .time,.bootomView .adress{
+  width: 100%;
+  height: 66rpx;
+  line-height: 66rpx;
+  color: #333;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+}
+
+/*侧边栏  */
+.leftView{
+  width: 600rpx;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+.leftView-top{
+  width: 100%;
+  height: 200rpx;
+  margin: 0 auto;
+  padding-top:10rpx;
+  padding-left: 18rpx;
+  overflow: hidden;
+}
+.leftView-top cover-image{
+  width: 128rpx;
+  height: 90rpx;
+  margin: 32rpx auto;
+}
+.leftView .hint{
+  width: 100%;
+  height: 26rpx;
+  line-height: 26rpx;
+  color: #999999;
+  font-size: 24rpx;
+  text-align: center;
+}
+.leftView-top .portrait{
+  float: left;
+  width: 116rpx;
+  height: 116rpx;
+  margin-right: 32rpx;
+  margin-left: 15rpx;
+  border-radius: 50%;
+}
+.leftView .equipment-information{
+  float: left;
+  width: 320rpx;
+  height: auto;
+  line-height: 54rpx;
+  color: #333;
+  padding-top:46rpx; 
+  font-size: 28rpx;
+}
+.leftView .equipment-id,.leftView .equipment-net{
+  width: 100%;
+  height: 54rpx;
+  overflow: hidden;
+}
+.leftView .equipment-net cover-view{
+  float: left;
+  width: auto;
+  color: #999;
+  padding-right: 20rpx;
+}
+.leftView-top .nav{
+  width: 68rpx;
+  height: 200rpx;
+  float: right;
+}
+.leftView-top .nav cover-image{
+  width: 16rpx;
+  height: 30rpx;
+  margin: 85rpx auto;
+}
+.bord{
+  width: 560rpx;
+  height: 2rpx;
+  background: #ccc;
+  margin: 0 auto;
+}
+.leftView .equipment{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.leftView .equipment-list{
+  float: left;
+  width: 500rpx;
+  height: auto;
+  display: flex;
+  padding-top: 18rpx;
+  padding-bottom: 50rpx;
+  align-items: center;
+  justify-content:space-around;
+  margin-left: 18rpx;
+}
+.leftView .equipment-box{
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  line-height: 64rpx;
+  width: 220rpx;
+  height: 168rpx;
+}
+.leftView .no-equipment{
+  margin: 0 auto;
+}
+.leftView .equipment-box cover-image{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 22rpx auto;
+  border-radius: 50%;
+}
+.leftView .equipment .nav{
+  height: 240rpx;
+  width: 78rpx;
+  float: right;
+}
+.leftView .equipment .nav cover-image{
+  width: 16rpx;
+  height: 30rpx;
+  margin: 100rpx auto;
+}
+.leftView-li{
+  width: 100%;
+  height: 114rpx;
+  line-height: 114rpx;
+}
+
+.leftView-li .iconPic{
+  width: 46rpx;
+  height: 46rpx;
+  margin: 34rpx 30rpx;
+  float: left;
+  margin-right: 40rpx;
+}
+.leftView-li .text{
+  float: left;
+  width: auto;
+  height: 114rpx;
+  line-height: 112rpx;
+  color: #333;
+  font-size: 26rpx;
+}
+.leftView-li .nav{
+  float: right;
+  width: 68rpx;
+  height: 114rpx;
+}
+.leftView-li .nav cover-image{
+ width: 16rpx;
+ height: 30rpx;
+ margin: 42rpx auto;
+}

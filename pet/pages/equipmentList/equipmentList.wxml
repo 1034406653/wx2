@@ -1,0 +1,22 @@
+<!--pages/equipmentList/equipmentList.wxml-->
+<view class='container'>
+  <view class='equipment-list'>
+    <view class='equipment-li' wx:for='{{equipmentList}}' wx:key='index'  wx:for-item='item'>
+      <image src='{{item.portrait}}'></image>
+      <view class='equipment-information'>
+        <view class='equipment-id'>{{item.id}}</view>
+        <view class='equipment-net'>
+          <view>{{item.net}}</view>
+          <view>{{item.location}}</view>
+        </view>
+      </view>
+      <view class='selectBtn' bindtap='selectEquipment' data-index="{{index}}">
+        <icon type="success" size="30" color="{{item.btnColor}}"></icon>
+      </view>
+    </view>
+  </view>
+  <view class='equipment-box' bindtap='navAddEuipment'>
+    <image src='../../images/add-btn.png'></image>
+    <view>添加设备</view>
+  </view>
+</view>

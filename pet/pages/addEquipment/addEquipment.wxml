@@ -1,0 +1,68 @@
+<!--pages/addEquipment/addEquipment.wxml-->
+<view class='container'>
+<view class='step1' wx:if='{{step1}}'>
+  <input placeholder='请输入IMEI号'/>
+  <button bindtap='navStep2'>下一步</button>
+</view>
+<view class='step2' wx:if='{{!step1}}'>
+  <view class='view-li'>
+    <view class='li-left'>
+    设备头像
+    </view>
+    <view class='next'>
+    <image src='../../images/icon-next1.png'></image>
+    </view>
+    <image class='portrait' src='{{portrait}}' bindtap='changePortrait'></image>
+  </view>
+  <view class='view-li' bindtap='showDialogBtn' data-textvalue='{{equipmentName}}' data-namevalue='equipmentName' data-titlevalue='设备名称'>
+    <view class='li-left'>
+    设备名称
+    </view>
+    <view class='next'>
+    <image src='../../images/icon-next1.png'></image>
+    </view>
+    <view class='text'>{{equipmentName}}</view>
+  </view>
+  <view class='view-li' bindtap='showDialogBtn' data-textvalue='{{equipmentType}}' data-namevalue='equipmentType' data-titlevalue='设备类型'>
+    <view class='li-left'>
+    设备类型
+    </view>
+    <view class='next'>
+    <image src='../../images/icon-next1.png'></image>
+    </view>
+    <view class='text'>{{equipmentType}}</view>
+  </view>
+  <view class='view-li'>
+    <view class='li-left'>
+    IMEI
+    </view>
+    <view class='text' style='color:#999;'>{{equipmentIMEI}}</view>
+  </view>
+  <view class='view-li' bindtap='showDialogBtn' data-textvalue='{{equipmentSIM}}' data-namevalue='equipmentSIM' data-titlevalue='SIM'>
+    <view class='li-left'>
+    SIM
+    </view>
+    <view class='next'>
+    <image src='../../images/icon-next1.png'></image>
+    </view>
+    <view class='text'>{{equipmentSIM}}</view>
+  </view>
+  <button style='margin-top:148rpx;'>确认添加</button>
+</view>
+</view>
+<!--模态框  -->
+<view class='mask' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{modal.showModal}}"></view>
+<view class='modal-dialog' wx:if="{{modal.showModal}}">
+  <view class='modal-title'>
+    {{modal.modalTitle}}
+  </view>
+  <view class='modal-content'>
+    <view class='modal-input'>
+      <input value='{{modal.modalValue}}' bindinput="inputChange" ></input>
+    </view>
+  </view>
+  <view class='modal-footer'>
+    <view class='btn-cancel' bindtap="onCancel">取消</view>
+    <view class='btn-confirm' bindtap="onConfirm">确定</view>
+  </view>
+</view>

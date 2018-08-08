@@ -1,0 +1,11 @@
+<!--pages/news/news.wxml-->
+<view class='container'>
+  <view class='news-li' wx:for='{{news}}' wx:key='index' wx:for-item='item'>
+    <view class='time'>{{item.time}}</view>
+    <view class='text'>
+      <image src='../../images/warn.png'></image>
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+  <view class='hint'>没有更多了~</view>
+</view>

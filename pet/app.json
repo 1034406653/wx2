@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/center/center",
+    "pages/news/news",
+    "pages/addEquipment/addEquipment",
+    "pages/equipmentList/equipmentList",
+    "pages/equipmentDetails/equipmentDetails",
+    "pages/rail/rail",
+    "pages/setRail/setRail",
+    "pages/card/card",
+    "pages/order/order",
+    "pages/set/set",
+    "pages/track/track"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2bbdea",
+    "navigationBarTitleText": "定位",
+    "navigationBarTextStyle":"#ffffff"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#26b6eb",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "定位",
+        "iconPath": "/images/icon-adress.png",
+        "selectedIconPath": "/images/icon-adress-active.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息",
+        "iconPath": "/images/icon-news.png",
+        "selectedIconPath": "/images/icon-news-active.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "/images/icon-center.png",
+        "selectedIconPath": "/images/icon-center-active.png"
+      }
+    ]
+  }
+}

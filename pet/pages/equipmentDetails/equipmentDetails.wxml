@@ -1,0 +1,104 @@
+<!--pages/equipmentDetails/equipmentDetails.wxml-->
+<view class='container'>
+  <view class='details-li' style='margin-top:16rpx;' bindtap='changePortrait'>
+    <view class='details-title'>
+      设备头像
+    </view>
+    <view class='details-nav'>
+      <image src='../../images/icon-next1.png'></image>
+    </view>
+    <image src='{{portrait}}' class='portrait'></image>
+  </view>
+  <view class='details-li' bindtap='showDialogBtn' data-textvalue='{{equipmentName}}' data-namevalue='equipmentName' data-titlevalue='设备名称'>
+    <view class='details-title'>
+      设备名称
+    </view>
+    <view class='details-nav'>
+      <image src='../../images/icon-next1.png'></image>
+    </view>
+    <view class='details-text'>
+      <text>{{equipmentName}}</text>
+    </view>
+  </view>
+  <view class='details-li' bindtap='showDialogBtn' data-textvalue='{{equipmentType}}' data-namevalue='equipmentType' data-titlevalue='设备类型'>
+    <view class='details-title'>
+      设备类型
+    </view>
+    <view class='details-nav'>
+      <image src='../../images/icon-next1.png'></image>
+    </view>
+    <view class='details-text'>
+      <text>{{equipmentType}}</text>
+    </view>
+  </view>
+  <view class='details-li'>
+    <view class='details-title'>
+      IMEI
+    </view>
+    <view class='details-text1'>
+      <text>{{equipmentIMEI}}</text>
+    </view>
+  </view>
+  <view class='details-li' bindtap='showDialogBtn' data-textvalue='{{equipmentSIM}}' data-namevalue='equipmentSIM' data-titlevalue='SIM'>
+    <view class='details-title'>
+      SIM
+    </view>
+    <view class='details-nav'>
+      <image src='../../images/icon-next1.png'></image>
+    </view>
+    <view class='details-text'>
+      <text>{{equipmentSIM}}</text>
+    </view>
+  </view>
+  <view class='details-li' style='margin-top:16rpx;'>
+    <view class='details-title'>
+      电量
+    </view>
+    <view class='details-text1'>
+      <text>{{equipmentEnergy}}</text>
+    </view>
+  </view>
+  <view class='details-li'>
+    <view class='details-title'>
+      状态
+    </view>
+    <view class='details-text1'>
+      <text>{{equipmentState}}</text>
+    </view>
+  </view>
+  <view class='details-li'>
+    <view class='details-title'>
+      定位时间
+    </view>
+    <view class='details-text1'>
+      <text>{{equipmentTime}}</text>
+    </view>
+  </view>
+  <view class='details-li2'>
+    <view class='details-title'>
+      定位地址
+    </view>
+    <view class='details-text2'>
+      <view>
+        {{equipmentAddress}}
+      </view>
+    </view>
+  </view>
+  <button bindtap='delEquipment'>解绑设备</button>
+</view>
+<!--模态框  -->
+<view class='mask' bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{modal.showModal}}"></view>
+<view class='modal-dialog' wx:if="{{modal.showModal}}">
+  <view class='modal-title'>
+    {{modal.modalTitle}}
+  </view>
+  <view class='modal-content'>
+    <view class='modal-input'>
+      <input value='{{modal.modalValue}}' bindinput="inputChange" ></input>
+    </view>
+  </view>
+  <view class='modal-footer'>
+    <view class='btn-cancel' bindtap="onCancel">取消</view>
+    <view class='btn-confirm' bindtap="onConfirm">确定</view>
+  </view>
+</view>

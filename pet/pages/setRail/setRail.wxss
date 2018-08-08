@@ -1,0 +1,130 @@
+/* pages/setRail/setRail.wxss */
+.container{
+  
+}
+/*搜索框  */
+.searchAdress{
+  width: 690rpx;
+  height: 64rpx;
+  margin: 20rpx auto;
+  background: #fff;
+  overflow: hidden;
+  border-radius:26rpx; 
+}
+.searchAdress input{
+  float: left;
+  width: 580rpx;
+  padding-left: 30rpx;
+  height: 64rpx;
+  background: transparent;
+  color: #999;
+  line-height: 64rpx;
+  font-size: 24rpx;
+}
+.searchAdress view{
+  float: right;
+  width: 110rpx;
+  height: 64rpx;
+  padding: 10rpx 35rpx
+}
+#map{
+  width: 100%;
+  flex: 1;
+}
+.mainBottom{
+  width: 100%;
+  height: 390rpx;
+  box-shadow: 0 -2rpx 2rpx 10rpx #eeeeee;
+  background: #fff;
+  padding-top: 10rpx;
+}
+.railName,.railDistance{
+  width: 100%;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 70rpx;
+  padding: 0 30rpx;
+  overflow: hidden;
+}
+.railName view,.railDistance view{
+  float: left;
+  width: auto;
+  padding-right: 36rpx;
+}
+.railName input,.railDistance input{
+  float: left;
+  width: 300rpx;
+  height: 48rpx;
+  line-height: 44rpx;
+  border: 2rpx solid #ccc;
+  border-radius:20rpx; 
+  padding-left: 20rpx;
+  margin: 11rpx 0;
+}
+.railName button,.railDistance button{
+  float: left;
+  width: auto;
+  height: 48rpx;
+  line-height: 48rpx;
+  padding: 0 20rpx;
+  border-radius:20rpx; 
+  margin: 11rpx 50rpx;
+}
+.railName view:last-child,.railDistance view:last-child{
+  color: #3dbdee;
+}
+.setRail{
+  width: 100%;
+  height: 52rpx;
+  color: #333;
+  font-size: 28rpx;
+  overflow: hidden;
+  padding: 10rpx 30rpx 0 30rpx;
+}
+.setRail>view:first-child{
+  float: left;
+  width: 290rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+}
+.setRail .selectBox{
+  float: left;
+  width: 370rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  color: #999;
+  overflow: hidden;
+}
+.selectBtn{
+  width: 80rpx;
+  height: 42rpx;
+  overflow: hidden;
+  margin-right: 60rpx;
+  float: left;
+}
+.selectBtn icon{
+  float: left;
+}
+.selectBtn view{
+  float: right;
+  width: auto;
+  height: 42rpx;
+}
+button{
+  width: 90%;
+  height: 88rpx;
+  color: #ffffff;
+  background: #1bc9ec;
+  text-align: center;
+  margin-top: 40rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+}
+button:after{
+  border: none;
+}
+.buttonActive{
+  background: #1b9bec;
+  color: #fff;
+}

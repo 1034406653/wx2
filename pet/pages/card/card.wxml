@@ -1,0 +1,40 @@
+<!--pages/card/card.wxml-->
+<view class='container'>
+<view class="view-li" style='margin-top:16rpx;'>
+<view class='view-title'>照片</view>
+<image src='{{portrait}}' bindtap='changePortrait'/>
+</view>
+<view class="view-li">
+<view class='view-title'>姓名</view>
+<input type='text' placeholder="请输入您的姓名" value='{{realname}}'placeholder-class="inputHover" bindinput='changeRealname'></input>
+</view>
+<view class="view-li">
+<view class='view-title'>爱宠宝贝昵称</view>
+<input type='text' placeholder="请输入您爱宠宝贝的昵称" value='{{nickname}}' placeholder-class="inputHover" bindinput='changeNickname'></input>
+</view>
+<view class="view-li">
+<view class='view-title'>爱宠宝贝ID</view>
+<input type='text' placeholder="请输入您爱宠宝贝的ID" value='{{IDnumber}}'placeholder-class="inputHover" bindinput='changeIDnumber'></input>
+</view>
+<view class="view-li" style='margin-top:16rpx;'>
+<view class='view-title'>手机号</view>
+<input type='text' placeholder="请输入您的手机号" value='{{phone}}'placeholder-class="inputHover" bindinput='changePhone'></input>
+</view>
+<view class="view-li">
+<view class='view-title'>微信号</view>
+<input type='text' placeholder="请输入您的微信号" value='{{WXnumber}}'placeholder-class="inputHover" bindinput='changeWXnumber'></input>
+</view>
+<view class="view-li">
+<view class='view-title'>QQ号</view>
+<input type='text' placeholder="请输入您的QQ号" value='{{QQnumber}}'placeholder-class="inputHover" bindinput='changeQQnumber'></input>
+</view>
+<view class="view-li view-li2" style='margin-top:16rpx;'>
+<view class='view-title'>地址</view>
+<textarea placeholder="请输入您的地址" placeholder-class="textAreaHover" maxlength="30" value="{{adress}}" bindinput='changeQQnumber' ></textarea>
+</view>
+<view class="view-li view-li2">
+<view class='view-title'>备注</view>
+<textarea placeholder="请输入您的不备注" placeholder-class="textAreaHover" value="{{message}}" maxlength="30"></textarea>
+</view>
+<button>保存</button>
+</view>

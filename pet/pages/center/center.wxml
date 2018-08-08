@@ -1,0 +1,37 @@
+<view class='container'>
+  <view class='center-top'>
+    <image src='../../images/portrait.png'></image>
+    <view class='nameBox'>
+      <view class='name-top'>
+        <view>热气球</view>
+        <view class='grade'>
+          <image src='../../images/grade.png'></image>
+          <view>5</view>
+        </view>
+        <image src='../../images/woman.png'></image>
+      </view>
+      <view class='idNumber'>ID:683668</view>
+    </view>
+    <view class='sign' bindtap='signed'>{{signText}}</view>
+  </view>
+  <view class='set' bindtap='navSet'>
+    <image src='../../images/icon-set.png'></image>
+    <view>设置</view>
+    <image src='../../images/icon-next1.png'></image>
+  </view>
+</view>
+<!--弹窗  -->,
+<view class='showModal' wx:if='{{showModalBox}}'>
+  <view class='mask2'></view>
+  <view class='modalMain'>
+    <view>
+      <image src='../../images/grade1.png'></image>
+      <view>5</view>
+    </view>
+    <view class='hint'>签到成功!</view>
+    <view>
+      <text>+5</text>
+      <text>经验值</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,104 @@
+<!--index.wxml-->
+<view class="container">
+  <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" bindcallouttap="callouttap"
+    show-location>
+    <!--遮罩  -->
+    <cover-view class='mask' wx:if='{{mask}}' bindtap='maskHide'></cover-view>
+    <!--设备信息  -->
+    <cover-view class='bootomView' wx:if='{{bootomView}}'>
+      <cover-view class='closeBottomBtn' bindtap='closeBottom'>
+        <cover-image src='../../images/down.png' class='downIcon'></cover-image>
+      </cover-view>
+      <cover-view class='equipment'>
+        <cover-view class='equipment-top'>
+          <cover-view class='equipment-id'>{{equipment.equipmentId}}</cover-view>
+          <cover-view class='equipment-net'>{{equipment.equipmentNet}}</cover-view>
+          <cover-view class='equipment-location'>{{equipment.equipmentLocation}}</cover-view>
+          <cover-view class='equipment-energy'>
+            <cover-view class='energy-box'>
+              <cover-view class='energy' style="width:{{equipment.equipmentEnergy}}"></cover-view>
+            </cover-view>
+            <cover-view class='percent'>{{equipment.equipmentEnergy}}</cover-view>
+          </cover-view>
+        </cover-view>
+        <cover-view class='time'>定位时间：{{equipment.time}}</cover-view>
+        <cover-view class='adress'>定位地址：{{equipment.adress}}</cover-view>
+      </cover-view>
+    </cover-view>
+    <!--侧边栏  -->
+    <cover-view class='leftView' wx:if="{{leftView}}">
+      <!--无设备  -->
+      <cover-view class='leftView-top' wx:if='{{!haveEquipment}}'>
+        <cover-image src='../../images/noEquipment.png'></cover-image>
+        <cover-view class='hint'>暂无设备，请先添加一个设备</cover-view>
+      </cover-view>
+      <!--有设备  -->
+      <cover-view class='leftView-top' wx:if='{{haveEquipment}}' bindtap='navEquipmentDetails'>
+        <cover-image src='../../images/portrait.png' class='portrait'></cover-image>  
+        <cover-view class='equipment-information'>
+        <cover-view class='equipment-id'>GT360S+772</cover-view>
+        
+        <cover-view class='equipment-net'>
+          <cover-view>在线</cover-view>
+          <cover-view>WiFy定位</cover-view>
+        </cover-view>
+        </cover-view>
+        <cover-view class='nav'>
+        <cover-image src='../../images/icon-next.png'></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class='bord'></cover-view>
+      <!--有设备  -->
+      <cover-view class='equipment' wx:if="{{haveEquipment}}">
+        <cover-view class='equipment-list'>
+           <cover-view class='equipment-box'>
+            <cover-image src='../../images/dogHead.png'></cover-image>
+            <cover-view>三毛的追踪器</cover-view>
+          </cover-view> 
+          <cover-view class='equipment-box' bindtap='navAddEuipment'>
+            <cover-image src='../../images/add-btn.png'></cover-image>
+            <cover-view>添加设备</cover-view>
+          </cover-view>
+        </cover-view>
+        <cover-view class='nav' bindtap='navEquipmentList'>
+        <cover-image src='../../images/icon-next.png'></cover-image>
+        </cover-view>
+      </cover-view>
+      <!--无设备  -->
+      <cover-view class='equipment' wx:if="{{!haveEquipment}}">
+          <cover-view class='equipment-box no-equipment' bindtap='navAddEuipment'>
+            <cover-image src='../../images/add-btn.png'></cover-image>
+            <cover-view>添加设备</cover-view>
+          </cover-view>
+      </cover-view>
+      <cover-view class='leftView-li' bindtap='navCard'>
+        <cover-image src='../../images/icon-card.png' class='iconPic'></cover-image>
+        <cover-view class='text'>电子名片</cover-view>
+        <cover-view class='nav'>
+          <cover-image src='../../images/icon-next.png'></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class='leftView-li' bindtap='navRail'>
+        <cover-image src='../../images/icon-rail.png' class='iconPic'></cover-image>
+        <cover-view class='text'>电子围栏</cover-view>
+        <cover-view class='nav'>
+          <cover-image src='../../images/icon-next.png'></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class='leftView-li' bindtap='navTrack'>
+        <cover-image src='../../images/icon-track.png' class='iconPic'></cover-image>
+        <cover-view class='text'>行走轨迹</cover-view>
+        <cover-view class='nav'>
+          <cover-image src='../../images/icon-next.png'></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class='leftView-li' bindtap='navOrder'>
+        <cover-image src='../../images/icon-order.png' class='iconPic'></cover-image>
+        <cover-view class='text'>指令</cover-view>
+        <cover-view class='nav'>
+          <cover-image src='../../images/icon-next.png'></cover-image>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </map>
+</view>

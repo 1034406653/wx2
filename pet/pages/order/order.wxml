@@ -1,0 +1,96 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+  <!--左侧导航  -->
+  <view class='left-nav'>
+    <view class='nav-li {{item.className}}' wx:for="{{nav}}" wx:key='index' wx:for-item="item" bindtap='tabChange' data-index='{{index}}'>
+      {{item.text}}
+    </view>
+  </view>
+  <view class='main-right'>
+    <!--监护号码 -->
+    <view class='main' wx:if="{{nav[0].className=='active'}}">
+      <view class='main-form' wx:for='{{custody}}' wx:key='index' wx:for-item="item">
+        <view>{{item.text}}</view>
+        <input placeholder='请输入电话号码' value='{{item.inputValue}}' placeholder-style="color:#cccccc"></input>
+      </view>
+      <view class='hint'>
+        指令说明：监护号码用于接收通知短息，在输入框为空时点击发送指令即可删除监护号码。
+      </view>
+      <button hover-class='btnActive' bindtap='order0'>发送指令</button>
+    </view>
+    <view class='main' wx:if="{{nav[1].className=='active'}}">
+      <view class='main-form'>
+        <view>设备回拨</view>
+        <input placeholder='请输入接听回拨的电话号码' value='{{}}' placeholder-style="color:#cccccc"></input>
+      </view>
+      <view class='hint'>
+        指令说明：向设备发送回拨指令后，设备会向您输入的号码拨打电话。
+      </view>
+      <button hover-class='btnActive' bindtap='order1'>发送指令</button>
+    </view>
+    <view class='main main2' wx:if="{{nav[2].className=='active'}}">
+      <view class='main-form'>
+        <view>立即定位</view>
+      </view>
+      <view class='hint'>
+        指令说明:向设备发送立即定位指令后,设备会马上刷新定位。
+      </view>
+      <button hover-class='btnActive' bindtap='order2'>发送指令</button>
+    </view>
+    <view class='main' wx:if="{{nav[3].className=='active'}}">
+      <view class='main-form'>
+        <view>定位频率</view>
+        <picker bindchange="bindHzChange" value="{{HzIndex}}" range="{{Hz}}">
+          <view class="picker">
+            {{Hz[HzIndex]}}
+          </view>
+           <view class='picker-btn'>
+            <image src='../../images/piker-btn.png'></image>
+          </view>
+        </picker>
+      </view>
+      <view class='hint'>
+        指令说明:向设备发送立即定位指令后,设备会马上刷新定位。
+      </view>
+      <button hover-class='btnActive' bindtap='order3'>发送指令</button>
+    </view>
+    <view class='main main2' wx:if="{{nav[4].className=='active'}}">
+      <view class='main-form'>
+        <view>远程关机</view>
+      </view>
+      <view class='hint'>
+        指令说明:向设备发送远程关机指令后，设备将自动关机。
+      </view>
+      <button hover-class='btnActive' bindtap='order4'>发送指令</button>
+    </view>
+    <view class='main' wx:if="{{nav[5].className=='active'}}">
+      <view class='main-form'>
+        <view>低电报警</view>
+        <picker bindchange="bindEnergyChange" value="{{energyIndex}}" range="{{energy}}">
+          <view class="picker">
+            {{energy[energyIndex]}}
+          </view>
+          <view class='picker-btn'>
+            <image src='../../images/piker-btn.png'></image>
+          </view>
+        </picker>
+      </view>
+      <view class='main-form'>
+        <view>通知方式</view>
+        <picker bindchange="bindInformChange" value="{{informIndex}}" range="{{inform}}">
+          <view class="picker">
+            {{inform[informIndex]}}
+          </view>
+          <view class='picker-btn'>
+            <image src='../../images/piker-btn.png'></image>
+          </view>
+        </picker>
+      </view>
+      <view class='hint'>
+        指令说明:当设备电量过低时，设备发出警报。
+      </view>
+      <button hover-class='btnActive' bindtap='order5'>发送指令</button>
+    </view>
+  </view>
+
+</view>

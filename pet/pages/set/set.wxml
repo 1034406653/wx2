@@ -1,0 +1,32 @@
+<!--pages/set/set.wxml-->
+<view class='container'>
+  <view class='set'>
+    <view class='set-li' style='margin-top:18rpx;'>
+      <view class='li-title'>绑定手机号</view>
+      <view class='navBtn'>
+        <image src='../../images/icon-next.png'></image>
+      </view>
+      <view class='li-text'>{{phone}}</view>
+    </view>
+    <view class='set-li'>
+      <view class='li-title'>绑定邮箱</view>
+      <view class='navBtn'>
+        <image src='../../images/icon-next.png'></image>
+      </view>
+      <view class='li-text'>{{email}}</view>
+    </view>
+    <view class='set-li' style='margin-top:18rpx;'>
+      <view class='li-title'>声音设置</view>
+      <view class='navBtn'>
+        <image src='../../images/icon-next.png'></image>
+      </view>
+    </view>
+    <view class='set-li'>
+      <view class='li-title'>清除缓存 ({{storage}}MB)</view>
+      <view class='navBtn'>
+        <image src='../../images/icon-next.png'></image>
+      </view>
+    </view>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 手机号</button>
+  </view>
+</view>

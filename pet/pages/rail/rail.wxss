@@ -1,0 +1,145 @@
+/* pages/rail/rail.wxss */
+.rail-li{
+  width: 100%;
+  height: 240rpx;
+  background: #fff;
+  margin-top: 16rpx;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+.rail-top{
+  width: 100%;
+  height: 56rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  padding-top: 32rpx;
+  overflow: hidden;
+  padding-left: 30rpx;
+}
+.rail-top view:first-child{
+  width: auto;
+  float: left;
+  height: 24rpx;
+  color: #333;
+}
+.rail-top view:last-child{
+  width: auto;
+  float: right;
+  height: 24rpx;
+  color: #999;
+  padding-right: 100rpx;
+}
+.equipment-address{
+  width: 100%;
+  padding: 0 30rpx;
+  height: 78rpx;
+  padding-top: 24rpx;
+  line-height: 24rpx;
+  color: #999;
+  font-size: 24rpx;
+  border-bottom: 1rpx solid #ccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rail-bottom{
+  width: 100%;
+  height: 105rpx;
+  overflow: hidden;
+  line-height: 105rpx;
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 30rpx;
+}
+.rail-bottom>view:first-child{
+  width: auto;
+  height: 105rpx;
+  float: left;
+}
+.rail-bottom .selectBox{
+  width: auto;
+  height: 105rpx;
+  float: right;
+  padding-right: 20rpx;
+}
+.rail-bottom .selectBtn{
+  width: 72rpx;
+  height: 105rpx;
+  float: left;
+  margin-right: 72rpx;
+}
+.rail-bottom .selectBtn {
+  width: 78rpx;
+  height: 105rpx;
+  float: left;
+  margin-right: 60rpx;
+}
+.rail-bottom .selectBtn icon{
+  float: left;
+  margin-top: 23rpx;
+}
+.rail-bottom .selectBtn view{
+  float: right;
+  color: #999;
+  width: auto;
+  height: 105rpx;
+}
+.iconBox{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 88rpx;
+  height: 88rpx;
+}
+.iconBox icon{
+  position: absolute;
+  right: 10rpx;
+  top: 16rpx;
+  z-index: 2;
+
+}
+.iconBox view{
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top:44rpx solid #eeeeee;
+  border-right:44rpx solid #eeeeee;
+  border-bottom:44rpx solid transparent;
+  border-left:44rpx solid transparent;
+}
+.activeRail .iconBox view{
+  border-top:44rpx solid #26b6eb;
+  border-right:44rpx solid #26b6eb;
+  border-bottom:44rpx solid transparent;
+  border-left:44rpx solid transparent;
+}
+button{
+  width: 90%;
+  height: 88rpx;
+  color: #ffffff;
+  background: #1bc9ec;
+  text-align: center;
+  margin-top: 40rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+}
+button:after{
+  border: none;
+}
+.buttonActive{
+  background: #1b9bec;
+  color: #fff;
+}
+.del-box{
+  width: 100rpx;
+  height: 240rpx;
+}
+.rail-li-main{
+  flex: 1;
+  height: 240rpx;
+  overflow: hidden;
+  position: relative;
+}

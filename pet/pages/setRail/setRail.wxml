@@ -1,0 +1,36 @@
+<!--pages/setRail/setRail.wxml-->
+<view class='container'>
+<view class='searchAdress'>
+  <input placeholder='请输入要搜索的具体位置' bindinput='bindAdressChange'></input>
+  <view class='searchBtn' bindtap='searchAdress'><icon type='search' size='20' color='#9b9b9b'></icon></view>
+</view>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}" markers="{{markers}}" circles="{{circles}}"></map>
+  <view class='mainBottom'>
+  <!--围栏名称  -->
+    <view class='railName' wx:if='{{!showNameInput}}'>
+      <view>{{railName}}</view>
+      <view bindtap='changeRailName'>[更改名称]</view>
+    </view>
+    <view class='railName' wx:if='{{showNameInput}}'><input value='{{railName}}' focus='true' bindinput="bindRailName"></input><button bindtap='onNameConfirm'>确认</button></view>
+  <!--围栏距离  -->
+    <view class='railDistance' wx:if='{{!showDistanceInput}}'>
+      <view>方圆{{railDistance}}米</view>
+      <view bindtap='changeRailDistance'>[更改范围]</view>
+    </view>
+    <view class='railDistance' wx:if='{{showDistanceInput}}'><input value='{{railDistance}}' focus='true' bindinput="bindRailDistance"></input><button bindtap='onDistanceConfirm'>确认</button></view>
+    <view class='setRail'>
+      <view>出入警告设置</view>
+      <view class='selectBox'>
+        <view class='selectBtn' bindtap='onOut'>
+          <icon size='20' type='success' color='{{rail.out.color}}'></icon>
+          <view>出</view>
+        </view>
+        <view class='selectBtn' bindtap='onEnter'>
+          <icon size='20' type='success' color='{{rail.enter.color}}'></icon>
+          <view>入</view>
+        </view>
+      </view>
+    </view>
+    <button hover-class='buttonActive'>保存</button>
+  </view>
+</view>

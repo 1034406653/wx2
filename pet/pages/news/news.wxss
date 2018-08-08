@@ -1,0 +1,42 @@
+/* pages/news/news.wxss */
+.news-li{
+  width: 100%;
+  height: auto;
+  margin-bottom: 20rpx;
+}
+.news-li .time{
+  width: 100%;
+  height: 62rpx;
+  padding-top: 12rpx;
+  line-height: 50rpx;
+  color: #999;
+  font-size:20rpx;
+  text-align: center; 
+}
+.news-li .text{
+  width: 100%;
+  height: auto;
+  line-height: 48rpx;
+  padding: 20rpx 30rpx;
+  color: #666;
+  font-size:26rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.news-li .text image{
+  width: 48rpx;
+  height: 48rpx;
+  float: left;
+}
+.news-li .text text{
+  float: left;
+  padding-left: 20rpx;
+}
+.hint{
+  width: 100%;
+  height: 60rpx;
+  color: #999;
+  font-size:24rpx;
+  line-height: 66rpx; 
+  text-align: center;
+}

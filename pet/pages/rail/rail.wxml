@@ -1,0 +1,33 @@
+<!--pages/rail/rail.wxml-->
+<view class='container'>
+  <view class='rail-li {{item.className}}' wx:for='{{rail}}' wx:key='index' wx:for-item='item' catchlongpress='delBoxActive'>
+    <view class='rail-li-main'>
+      <view class='rail-top'>
+        <view>{{item.name}}</view>
+        <view>方圆{{item.distance}}200米</view>
+      </view>
+      <view class='equipment-address'>{{item.address}}</view>
+      <view class='rail-bottom'>
+        <view>出入警告设置</view>
+        <view class='selectBox'>
+          <view class='selectBtn' catchtap='onOut' data-index='{{index}}'>
+            <icon size='20' type='success' color='{{item.out.color}}'></icon>
+            <view>出</view>
+          </view>
+          <view class='selectBtn' catchtap='onEnter' data-index='{{index}}'>
+            <icon size='20' type='success' color='{{item.enter.color}}'></icon>
+            <view>入</view>
+          </view>
+        </view>
+      </view>
+      <view class='iconBox'>
+        <icon type='success_no_circle' color='#ffffff' size='14'></icon>
+        <view class='borde'></view>
+      </view>
+    </view>
+    <view class='del-box' wx:if='{{showDel}}'>
+
+    </view>  
+  </view>
+  <button hover-class="buttonActive" catchtap='navSetRail'>添加电子围栏</button>
+</view>

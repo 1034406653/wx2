@@ -1,0 +1,35 @@
+<!--pages/track/track.wxml-->
+<view class='container'>
+  <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}" markers="{{markers}}" polyline="{{polyline}}" circles="{{circles}}" bindcontroltap="controltap" show-location></map>
+  <view class='time-box'>
+    <view class='time-control' bindtap="includePoints"><image src='../../images/icon-play.png'></image></view>
+    <view class='time-li'>
+      <view>开始时间：</view>
+      <picker mode="date" value="{{dateStart}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateStartChange">
+        <view class="picker">
+          {{dateStart}}
+        </view>
+      </picker>
+      <picker mode="time" value="{{timeStart}}" start="09:01" end="21:01" bindchange="bindTimeStartChange">
+        <view class="picker">
+          {{timeStart}}
+        </view>
+      </picker>
+      <image src='../../images/icon-next1.png'></image>
+    </view>
+     <view class='time-li'>
+      <view>结束时间：</view>
+      <picker mode="date" value="{{dateEnd}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateEndChange">
+        <view class="picker">
+          {{dateEnd}}
+        </view>
+      </picker>
+      <picker mode="time" value="{{dateEnd}}" start="09:01" end="21:01" bindchange="bindTimeEndChange">
+        <view class="picker">
+          {{timeEnd}}
+        </view>
+      </picker>
+      <image src='../../images/icon-next1.png'></image>
+    </view>
+  </view>
+</view>
