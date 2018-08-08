@@ -1,0 +1,56 @@
+<view class='container'>
+  <!--购物车为空  -->
+  <view class='cartBox cartIsEmpty' wx:if='{{cartIsEmpty}}'>
+    <view class='text'>
+      <image src='../../images/icon-cart.png'></image>
+      <text>暂时没有宝贝</text>
+    </view>
+    <view class='navIndex' bindtap='navIndex'>去逛逛</view>
+  </view>
+  <!--购物车不为空  -->
+  <view class='cartBox' wx:if='{{!cartIsEmpty}}'>
+    <view class='cartBox-top'>
+      <view class='checkBoxZong {{selectAll}}' bindtap='selectAll'></view>
+      <view class='cartBox-top-text'>全选</view>
+      <view class='cartBox-topBtn' bindtap='typeChange'>{{cartBoxTopBtn}} </view>
+    </view>
+    <view class='goodsList'>
+      <view class='goodsLi' wx:for='{{cartGoods}}' wx:key="index" wx:for-item='item'>
+        <view class='checkBox {{item.select}}' data-index="{{index}}" bindtap='selected'></view>
+        <image src='{{item.imgUrl}}' />
+        <view class='goodsDetails' wx:if='{{goodsTails}}'>
+          <view class='goodsDetails-top'>
+            <view class='goodsDetails-text'>{{item.text}}</view>
+            <view class='goodsDetails-price'>¥{{item.price}}</view>
+          </view>
+           <view class='goodsDetails-bottom'>
+            <!-- <text class='sizeColor'>{{item.colorSize}}</text> -->
+            <text class='num'>x{{item.buyNum}}</text>
+          </view> 
+        </view>
+        <view class='changeBox' wx:if='{{!goodsTails}}'>
+          <view class='changeNum'>
+            <view class='reduceNmu {{item.reduceNmuActive}}' bindtap='reduceNum' data-index="{{index}}">-</view>
+            <view class='nmuText'>{{item.buyNum}}</view>
+            <view class='addNmu {{item.addNmuActive}}' bindtap='addNum' data-index="{{index}}">+</view>
+          </view>
+          <view class='changeDel' bindtap='delGoods' data-index="{{index}}">
+            删除
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='cartBox-bottom' wx:if='{{goodsTails}}'>
+      <view class='cartBox-bottom-left'>合计：
+        <text class='num'>{{totalMoney}}</text>
+        <text>(不含运费)</text>
+      </view>
+      <view class='cartBox-bottom-btn' bindtap='buyAllGoods'>结算（{{payNum}}）</view>
+    </view>
+    <view class='cartBox-bottom' wx:if='{{!goodsTails}}'>
+      <view class='cartBox-bottom-left'>选中：
+        <text class='num'>{{delNum}}</text>件</view>
+      <view class='cartBox-bottom-btn' bindtap='delAllGoods'>删除</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,104 @@
+/* pages/integral/integral.wxss */
+.banner{
+  width: 100%;
+  height: 304rpx;
+  background: #f1874d;
+  color: #e5ecf6;
+}
+.banner-top{
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  font-size: 28rpx;
+  padding: 0 28rpx;
+  overflow: hidden;
+}
+.banner-top>view:first-child{
+  float: left;
+  width: auto;
+  height: 92rpx;
+}
+.banner-top>view:last-child{
+  float: right;
+  width: auto;
+  height: 92rpx;
+  overflow: hidden;
+}
+.banner-top image{
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  margin: 28rpx 12rpx;
+}
+.banner-top text{
+  float: left;
+  width: auto;
+  height: 92rpx;
+  font-size: 24rpx;
+}
+.integralNum{
+  width: 100%;
+  height: 132rpx;
+  font-size: 80rpx;
+  text-align: center;
+  color: #fff;
+}
+.hint{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 22rpx;
+  text-align: center;
+}
+.integral-main{
+  width: 100%;
+  height: auto;
+}
+.integral-top{
+  width: 100%;
+  height: 76rpx;
+  line-height: 76rpx;
+  color: #727272;
+  background: #f5f5f5;
+  font-size: 26rpx;
+  padding: 0 28rpx;
+}
+.integral-list{
+  width: 100%;
+  height: auto;
+  padding: 0 28rpx;
+}
+.integral-li{
+  width: 100%;
+  height: 112rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.integral-li-left{
+  float: left;
+  width: 90%;
+  height: 110rpx;
+  overflow: hidden;
+}
+.integral-li-left view:first-child{
+  width: 100%;
+  height: 66rpx;
+  line-height: 72rpx;
+  color: #202020;
+  font-size: 26rpx;
+}
+.integral-li-left view:last-child{
+  width: 100%;
+  height: 31rpx;
+  line-height: 31rpx;
+  color: #888888;
+  font-size: 22rpx;
+}
+.integral-li-right{
+  float: right;
+  width: 9%;
+  height: 110rpx;
+  line-height: 110rpx;
+  color: #ef5b1d;
+  font-size: 24rpx;
+  text-align: right;
+}

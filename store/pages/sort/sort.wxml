@@ -1,0 +1,38 @@
+<!--pages/sort/sort.wxml-->
+<view class='content'>
+  <view class='sort-top'>
+    <view class='input-box'>
+      <view class='search-icon'>
+        <image src='../../images/search-icon.png'/>
+      </view>
+      <input type='text' placeholder='搜索超市商品' placeholder-class='input-holder' bindtap='navSearch'/>
+    </view>
+    <view class='seclect-btn'>
+      <image src='../../images/select-icon.png'/>
+      <text>筛选</text>
+    </view>
+  </view>
+  <view class='sort-main'>
+    <view class='sort-left'>
+      <view class='sort-li1' wx:for='{{sortLi1}}' wx:key='index' wx:for-index='index' wx:for-item='item'>
+        <view class='sort1-text' data-index='{{index}}' bindtap='sortLi1Click'>{{item}}</view>
+        <view class='sort-li2' wx:if='{{sortLi2[index].li2Active}}'>
+          <view  wx:for='{{sortLi2[index].li2}}' wx:for-index='inde' wx:key='inde' wx:for-item='item2' class='{{item2.bordeActive}}' data-indexaaa="{{index}}" data-indexbbb="{{inde}}" bindtap='sortLi2Click'>
+            <view class='borde'></view>
+            <view class='sort2-text'>{{item2.nameText}}</view>
+          </view>
+        </view>
+      </view> 
+    </view>
+    <view class='sort-right'>
+      <image src='{{activity}}'/>
+      <view class='goodsLi' wx:for='{{goodsLi}}' wx:key='index' wx:for-index='index' wx:for-item='item' bindtap='navDetails' data-index='{{index}}'>
+          <image src='{{item.goodsImgUrl}}'/>
+          <view class='goodsLi-right'>
+            <view class='text'>{{item.text}}</view>
+            <view class='price'>¥{{item.price}}</view>
+          </view>  
+      </view>
+    </view>
+  </view>
+</view>

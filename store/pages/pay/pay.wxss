@@ -1,0 +1,294 @@
+/* pages/pay/pay.wxss */
+.content{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  overflow: auto;
+  border-top: 2rpx solid #eee;
+  padding-bottom: 50rpx;
+}
+.time{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #666;
+  font-size: 30rpx;
+  padding-left: 60rpx;
+  background: #fffdf0;
+}
+.time text{
+  display: inline-block;
+  width: 48rpx;
+  height: 46rpx;
+  margin-top: 22rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 46rpx;
+  color: #f66100;
+}
+.select-box{
+  width: 100%;
+  height: 128rpx;
+  background: #fff;
+  overflow: hidden;
+  padding: 16rpx 30rpx;
+}
+.select-box view{
+  float: left;
+  width: 50%;
+  height: 75rpx;
+  border:2rpx solid #dc4043;
+  text-align: center;
+  line-height: 70rpx;
+  color: #333;
+  font-size: 32rpx; 
+}
+.select-box view.active{
+  background: #dc4043;
+  color: #fff;
+}
+.adress{
+  width: 100%;
+  padding: 0 40rpx;
+  height: 100rpx;
+  background: #fff;
+}
+.adress-left{
+  width: 150rpx;
+  height: 98rpx;
+  overflow: hidden;
+  line-height: 40rpx;
+  font-size: 23rpx;
+  color: #666;
+  float: left;
+}
+.adress-center{
+  float: left;
+  width: 490rpx;
+  height: 98rpx;
+  color: #666;
+}
+.adress-center-top{
+  width: 100%;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.adress-center-top text{
+  display: inline-block;
+  padding-right: 20rpx;
+}
+.adress-center-bottom{
+  width: 100%;
+  line-height:48rpx; 
+  font-size: 22rpx;
+  height: 48rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.adress-right{
+  width: 24rpx;
+  height: 30rpx;
+  float: right;
+  margin-top: 10rpx;
+}
+.borde{
+  width: 100%;
+  height: 9rpx;
+}
+.message{
+  width: 100%;
+  height: 68rpx;
+  line-height: 68rpx;
+  background: #fff;
+  margin-top: 18rpx;
+  padding: 0 40rpx;
+}
+.message-left{
+  width: 150rpx;
+  height: 68rpx;
+  overflow: hidden;
+  line-height: 60rpx;
+  font-size: 23rpx;
+  color: #666;
+  float: left;
+}
+.message input{
+  float: left;
+  width: 510rpx;
+  height: 68rpx;
+  color: #666;
+  font-size: 26rpx;
+  line-height: 68rpx;
+}
+.orders{
+  width: 100%;
+  height: auto;
+  padding: 0 40rpx;
+  background: #fff;
+  margin-top: 18rpx;
+}
+.orders-top{
+  width: 100%;
+  height: 69rpx;
+  line-height: 66rpx;
+  border-bottom: 3rpx solid #eee;
+  font-size: 24rpx;
+  color: #333;
+}
+.order-li{
+  width: 100%;
+  height: 140rpx;
+  border-bottom: 3rpx solid #eee;
+}
+.order-li image{
+  float: left;
+  width: 102rpx;
+  height: 102rpx;
+  margin: 17rpx 18rpx 0 10rpx;
+}
+.order-li .text{
+  float: left;
+  width: 400rpx;
+  line-height: 44rpx;
+  height: 88rpx;
+  color: #333;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical; 
+  margin-top: 20rpx; 
+}
+.order-right{
+  float: right;
+  text-align: right;
+  width: 135rpx;
+  height: 88rpx;
+  line-height: 44rpx;
+  margin-top: 20rpx;
+  color: #333;
+  font-size: 24rpx;
+}
+.order-right .price{
+  display: block;
+  width: 100%;
+  height: 44rpx;
+  line-height: 44rpx;
+  overflow: hidden;
+}
+.order-right .num{
+  display: block;
+  width: 100%;
+  height: 44rpx;
+  line-height: 44rpx;
+}
+.orders-bottom{
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+.orders-bottom text{
+  float: left;
+  height: 86rpx;
+  line-height: 86rpx;
+  width: 50%;
+}
+.orders-bottom text:last-child{
+  text-align: right;
+  font-weight: bold;
+}
+.payMethod{
+  width: 100%;
+  height: 150rpx;
+  margin-top: 18rpx;
+  padding: 0 36rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.payMethod image{
+  width: 84rpx;
+  height:76rpx;
+  float: left;
+  margin-top: 36rpx;
+}
+.payMethod-center{
+  float: left;
+  width: 540rpx;
+  height: 150rpx;
+  padding-left: 28rpx;
+}
+.payMethod-center>view{
+  display: block;
+  width: 100%;
+  height: 90rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+  padding-top:46rpx;
+}
+.payMethod-center>view:last-child{
+  display: block;
+  width: 100%;
+  height: 26rpx;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  color: #999;
+  padding: 0;
+}
+.payMethod icon{
+ float: right;
+ margin-top: 60rpx;
+}
+button{
+  width: 88%;
+  margin: 0 auto;
+  height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  color: #fff;
+  background: #dc4043;
+  border: none;
+}
+.btn-active{
+  border: none;
+  background: #9f1424;
+}
+.adress2{
+  width: 100%;
+  height: 182rpx;
+  background: #fff;
+  line-height: 48rpx;
+  font-size: 26rpx;
+  color: #666;
+  padding: 0 36rpx;
+  padding-bottom: 20rpx;
+}
+.adress2>view{
+  width: 100%;
+  height: 50rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.adress2 .adress2-left{
+  width: 150rpx;
+  height: 48rpx;
+  float: left;
+}
+.adress2 input{
+  float: left;
+  width: 400rpx;
+  height: 48rpx;
+  min-height: 0;
+  overflow: hidden;
+}
+.adress2 .section{
+  float: left;
+  width: 400rpx;
+  height: 48rpx;
+  min-height: 0;
+}

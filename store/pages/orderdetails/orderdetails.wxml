@@ -1,0 +1,52 @@
+<!--pages/orderdetails/orderdetails.wxml-->
+<view class='content'>
+  <view class='banner'>
+    <image src='../../images/orderdetalis-baanner.jpg' />
+    <view>{{state}}</view>
+  </view>
+  <view class='delivery'>
+    <image src='../../images/icon-delivery.png' />
+    <view class='delivery-main'>
+      <view class='brand'>{{brand}}</view>
+      <view class='courier'>快递员:{{courier}}</view>
+      <view class='time'>{{time}}</view>
+    </view>
+  </view>
+  <view class='adress'>
+    <image src='../../images/icon-adress.png' />
+    <view class='adress-main'>
+      <view class='peopleText'>
+        <view>收货人:{{peopleName}}</view>
+        <view>{{phonePhone}}</view>
+      </view>
+      <view class='adressText'>收货地址:{{adress}}</view>
+    </view>
+  </view>
+  <view class='order-li'>
+    <view class='order-li-top'>
+      <image src='../../images/order2.png'></image>
+      <text>订单编号：{{item.orderId}}</text>
+      <text class='order-state'>{{item.orderState}}</text>
+    </view>
+    <view class='order-li-middle' wx:for='{{orderli}}' wx:key='index' wx:for-item='item'>
+      <image src='{{item.imgUrl}}'></image>
+      <view class='middle-right'>
+        <view class='middle-right-top'>
+          <view class='text'>{{item.text}}</view>
+          <view class='price'>¥{{item.price}}</view>
+        </view>
+        <view class='middle-right-bottom'>
+          <view class='num'>x {{item.num}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='order-li-bottom'>
+      <view class='totalPrice'>
+        <text>总金额：</text>
+        <text class='price'>¥{{totalPrice}}</text>
+        <text class='freight'>(含运费：¥{{0.00}})</text>
+      </view>
+      <view class='navAfterSale' catchtap='navServerType'>申请售后</view>
+    </view>
+  </view>
+</view>

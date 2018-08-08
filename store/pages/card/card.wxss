@@ -1,0 +1,74 @@
+/* pages/card/card.wxss */
+.rule{
+  width: 100%;
+  height: 66rpx;
+}
+.rule view{
+  float: right;
+  width: 140rpx;
+  text-align: center;
+  line-height: 66rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+/*卡  */
+.card{
+  width: 92%;
+  height: 256rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #eee;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.card>image{
+  float: left;
+  width: 110rpx;
+  height: 100rpx;
+  margin: 38rpx 28rpx 0 28rpx;
+}
+.card-main{
+  float: left;
+  width: 508rpx;
+  height: 250rpx;
+  padding-top: 26rpx;
+}
+.card-main .title{
+  line-height: 66rpx;
+  height: 66rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+.card-main .money{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size:24rpx;
+  color: #999; 
+}
+.card-main .money text{
+ color: #333;
+ font-size: 30rpx; 
+}
+.card-main .bottom{
+ width: 100%;
+ height: 76rpx;
+ padding-top: 26rpx;
+ line-height: 50rpx;
+ color: #999;
+ font-size: 27rpx;
+ padding-right: 30rpx;
+}
+.card-main button{
+ float: right;
+ background: #f36d14;
+ color: #fff;
+ text-align: center;
+ width: 120rpx;
+ height: 44rpx;
+ line-height: 44rpx;
+ font-size: 30rpx;
+ padding: 0;
+ margin-top:3rpx;
+ border-radius:10rpx;  
+}

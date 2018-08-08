@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="content">
+<!--banner轮播图  -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}" class='banner'>
+    <block wx:for="{{bannerImgUrls}}" wx:key="index" wx:for-item='item'>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--搜索框  -->
+  <view class='search'>
+    <view class='input-box' bindtap='navSearch'>
+      <view class='search-icon'>
+        <image src='../../images/search-icon.png'/>
+      </view>
+      <input type='text' placeholder='搜索超市商品' placeholder-class='input-holder'/>
+    </view>
+  </view>
+  <!--导航栏  -->
+  <view class='nav'>
+    <view class='navLi' wx:for='{{nav}}' wx:key='index' wx:for-item='item'>
+      <image src='{{item.imgUrl}}'/>
+      <view>{{item.text}}</view>
+    </view>
+  </view>
+  <!--商品列表  -->
+  <view class='goods'>
+    <view class='sortBox' wx:for='{{sortLi}}' wx:key='goodsSort' wx:for-item='item' wx:for-index='goodsSort'>
+      <view class='sort-title'>
+        <image src='{{item.sortImgUrl}}'/>
+      </view>
+      <view class='goodsLiBox'>
+        <view class='goodsLi' wx:for='{{item.goodsLi}}' wx:key='index' wx:for-item='item2' wx:for-index='index' bindtap='navDetails' data-sort='{{goodsSort}}' data-li='{{index}}'>
+          <image src='{{item2.goodsImgUrl}}'/>
+          <view class='text'>{{item2.text}}</view>
+          <view class='oldPrice'><text>{{item2.oldPrice}}</text></view>
+          <view class='price'><text>{{item2.price}}</text></view>
+          <button catchtap='addCart'>+</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

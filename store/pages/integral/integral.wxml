@@ -1,0 +1,31 @@
+<!--pages/integral/integral.wxml-->
+<view class='content'>
+  <view class='banner'>
+    <view class='banner-top'>
+      <view>当前积分</view>
+      <view bindtap='navIntegralExplain'>
+        <image src='../../images/icon-usinghelp.png' /> 使用帮助
+      </view>
+    </view>
+    <view class='integralNum'>
+      30
+    </view>
+    <view class='hint'>
+      积分可以当钱花哦
+    </view>
+  </view>
+  <view class='integral-main'>
+    <view class='integral-top'>
+      积分明细
+    </view>
+    <view class='integral-list'>
+      <view class='integral-li' wx:for='{{integraList}}' wx:key='index' wx:for-item='item'>
+        <view class='integral-li-left'>
+          <view>{{item.text}}</view>
+          <view>{{item.time}}</view>
+        </view>
+        <view class='integral-li-right'>+{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+</view>

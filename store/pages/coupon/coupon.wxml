@@ -1,0 +1,95 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='content'>
+  <view class='rule'>
+    <view bindtap='showRule'>使用规则</view>
+  </view>
+  <view wx:for='{{couponAllCan}}' wx:key='index' wx:for-item='item' class='{{item.couponType}}'>
+    <image src='../../images/coupon1-bg.png' />
+    <view class='coupon-main'>
+      <view class='coupon-left'>
+        <view class='restrict'>{{item.restrict}}</view>
+        <view class='num'>
+          ¥
+          <text>{{item.num}}</text>
+        </view>
+        <view class='countDown'>
+          仅剩
+          <text>{{item.countDown}}</text> 天
+        </view>
+      </view>
+      <view class='coupon-right'>
+        <view class='title'>{{item.title}}</view>
+        <view class='text'>{{item.text}}</view>
+        <view class='time'>有效期至：{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:for='{{couponDiscount}}' wx:key='index' wx:for-item='item' class='{{item.couponType}}'>
+    <image src='../../images/coupon2-bg.png' />
+    <view class='coupon-main'>
+      <view class='coupon-left'>
+        <view class='restrict'>{{item.restrict}}</view>
+        <view class='num'>
+          <text>{{item.num}}</text>
+          折
+        </view>
+        <view class='countDown'>
+          仅剩
+          <text>{{item.countDown}}</text> 天
+        </view>
+      </view>
+      <view class='coupon-right'>
+        <view class='title'>{{item.title}}</view>
+        <view class='text'>{{item.text}}</view>
+        <view class='time'>有效期至：{{item.time}}</view>
+      </view>
+    </view>
+    <view class='navGoodList' bindtap='navGoodList'>去使用</view>
+  </view>
+  <view wx:for='{{couponMoneyOff}}' wx:key='index' wx:for-item='item' class='{{item.couponType}}'>
+    <image src='../../images/coupon1-bg.png' />
+    <view class='coupon-main'>
+      <view class='coupon-left'>
+        <view class='restrict'>{{item.restrict}}</view>
+        <view class='num'>
+          ¥
+          <text>{{item.num}}</text>
+        </view>
+        <view class='countDown'>
+          仅剩
+          <text>{{item.countDown}}</text> 天
+        </view>
+      </view>
+      <view class='coupon-right'>
+        <view class='title'>{{item.title}}</view>
+        <view class='text'>{{item.text}}</view>
+        <view class='time'>有效期至：{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='blackBg' wx:if='{{popupShow}}'></view>
+<view class='popup' wx:if='{{popupShow}}'>
+  <view class='title'>券使用说明</view>
+  <view class='popupText'>
+    <view>
+    1.立减券、满减券、折扣券仅能在线上提交订单时抵减应支付商品金额（不能抵减运费），不能进行兑换或其他用途；
+    </view>
+    <view>
+      2.优惠券不能叠加使用，一个订单只能使用一张优惠券；
+    </view>
+    <view>
+       3、使用优惠券的订单，优惠券金额会分摊到每个商品；订单取消后，系统会返还相应的优惠券，如果优惠券已过期，将无法继续使用；签收后退货不退还优惠券，退款金额为退货商品的实际支付金额；
+    </view>
+    <view>
+      4、所有柏源发放的优惠券严禁出售或转让，如经发现并证实，该券予以作废处理；
+    </view>
+    <view>
+      5、订单中优惠券金额不开具发票；
+    </view>
+    <view>
+      6、部分特价商品不支持使用优惠券；
+    </view>
+  </view>
+  <button class='bottomBtn' hover-class='bottomBtnActive' bindtap='popupHide'>知道啦</button>
+</view>

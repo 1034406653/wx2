@@ -1,0 +1,77 @@
+<!--pages/center/center.wxml-->
+<view class='container'>
+  <view class='center-top'>
+    <view class='image-box'>
+      <image src="{{userInfo.avatarUrl}}"/>
+    </view>
+    <text class='center-name'>{{userInfo.nickName}}</text>
+    <view class='center-id'>
+      <image src='../../images/diamond.png'/>
+      <text>1232131311</text>
+    </view>
+  </view>
+  <view class='center-main'>
+    <view class='main-top' bindtap='allNavOrder'>
+      <image src='../../images/order.png'/>
+      <text>全部订单</text>
+      <image src='../../images/next.png'/>
+    </view>
+    <view class='main'>
+      <view class='nav-pay' bindtap='payNavOrder'>
+        <view class='icon-box'>
+          <image src='../../images/pay.png'/>
+          <view class='icon' wx:if='{{ifPay}}'>{{payNum}}</view>
+        </view>
+        <text>待付款</text>
+      </view>
+      <view class='nav-send' bindtap='sendNavOrder'>
+        <view class='icon-box'>
+          <image src='../../images/send.png'/>
+          <view class='icon' wx:if='{{ifSend}}'>{{sendNum}}</view>
+        </view>
+          <text>待发货</text>
+      </view>
+      <view class='nav-receipt' bindtap='receiptNavOrder'>
+        <view class='icon-box'>
+          <image src='../../images/receipt.png'/>
+          <view class='icon' wx:if='{{ifRecript}}'>{{receiptNum}}</view>
+        </view>
+        <text>待收货</text>
+      </view>
+      <view class='nav-done' bindtap='doneNavOrder'>
+        <view class='icon-box'>
+          <image src='../../images/done.png'/>
+          <view class='icon' wx:if='{{ifDone}}'>{{doneNum}}</view>
+        </view>
+        <text>已完成</text>
+        </view>
+      </view>
+  </view>
+  <view class='property'>
+    <view class='property-title'>
+      <image src='../../images/icon-property.png'/>
+      <text>我的资产</text>
+      <view class='navNoPassword'>开通安全免密支付</view>
+      <image src='../../images/next.png'/>
+    </view>
+    <view class='property-main'>
+      <view class='money'>
+        <view class='num'>¥{{money}}</view>
+        <view class='text'>余额</view>
+      </view>
+      <view class='member-integral' bindtap='navIntegral'>
+        <view class='num'>¥{{memberIntegral}}</view>
+        <view class='text'>积分</view>
+      </view>
+      <view class='member-card' bindtap='navCard'>
+        <view class='recharge'>充值吧</view>
+        <view class='num'>¥{{0.00}}</view>
+        <view class='text'>卡包</view>
+      </view>
+      <view class='coupon' bindtap='navCoupon'>
+        <view class='num'>¥{{10}}</view>
+        <view class='text'>优惠券</view>
+      </view>
+    </view>
+  </view>
+</view>
