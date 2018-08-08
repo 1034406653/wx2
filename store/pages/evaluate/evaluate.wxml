@@ -1,0 +1,38 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='content'>
+  <view class='nav'>
+    <view class='{{item.viewClass}}' wx:for='{{nav}}' wx:key='index' wx:for-item='item' data-index='{{index}}' bindtap='tabClick'>
+      <view class='text'>{{item.text}}</view>
+      <view class='num'>{{item.num}}</view>
+    </view>
+  </view>
+  <view class='evaluate-list'>
+    <view class='evaluate-li' wx:for='{{evaluate}}'wx:key='index' wx:for-item='item'>
+      <view class='chatHead'><image src='{{item.imgUrl}}'/></view>
+      <view class='evaluate-li-right'>
+        <view class='top'>
+          <view class='phone'>{{item.phone}}</view>
+          <view class='time'>{{item.time}}</view>
+        </view>
+        <view class='star-box'>
+          <image src='{{item.star}}'></image>
+          <image src='{{item.star}}'></image>
+          <image src='{{item.star}}'></image>
+          <image src='{{item.star}}'></image>
+          <image src='{{item.star}}'></image>
+        </view>
+        <view class='evaluate1'>
+          <view wx:for='{{item.evaluate1}}' wx:key='index2' wx:for-item='item2'>{{item2}}</view>
+        </view>
+        <view class='evaluate2' wx:if='{{item.evaluate2.length>0}}'>
+          {{item.evaluate2}}
+        </view>
+        <view class='reply' wx:if='{{item.reply.length>0}}'>
+        柏源回复：<text>{{item.reply}}</text> 
+        </view>
+      </view>
+    </view>
+    <!--评论为空  -->
+    <view class='evaluate-empty' wx:if='{{evaluate.length<=0}}'>没有相关评论！</view>
+  </view>
+</view>

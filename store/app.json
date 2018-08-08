@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sort/sort",
+    "pages/cart/cart",
+    "pages/center/center",
+    "pages/details/details",
+    "pages/order/order",
+    "pages/pay/pay",
+    "pages/search/search",
+    "pages/evaluate/evaluate",
+    "pages/writeEvaluate/writeEvaluate",
+    "pages/coupon/coupon",
+    "pages/card/card",
+    "pages/recharge/recharge",
+    "pages/orderdetails/orderdetails",
+    "pages/serverType/serverType",
+    "pages/applyFor/applyFor",
+    "pages/integral/integral",
+    "pages/integralExplain/integralExplain"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "超市首页",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ff2444"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon-index.png",
+        "selectedIconPath": "/images/icon-index-active.png"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "text": "分类",
+        "iconPath": "/images/icon-sort.png",
+        "selectedIconPath": "/images/icon-sort-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/images/icon-cart.png",
+        "selectedIconPath": "/images/icon-cart-active.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "/images/icon-center.png",
+        "selectedIconPath": "/images/icon-center-active.png"
+      }
+    ]
+  }
+}

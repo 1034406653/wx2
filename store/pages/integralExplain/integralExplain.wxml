@@ -1,0 +1,121 @@
+<!--pages/integralExplain/integralExplain.wxml-->
+<view class='content'>
+  <view class='nav'>
+    <view class='nav-btn {{item.className}}' wx:for="{{nav}}" wx:key='index' wx:for-item='item' data-index='{{index}}' bindtap='tabChange'>
+      {{item.text}}
+    </view>
+  </view>
+  <!--会员等级  -->
+  <view class='main' wx:if='{{nav[0].className}}'>
+    <view class='main-title'>
+      • 会员等级说明
+    </view>
+    <view class='main-text'>
+      <view>会员级别共分为4个等级，分别为普通卡、银卡、金卡、铂金卡、会员级别由成长值决定，成长值越高会员等级越高，享受到的会员权益越大。</view>
+      <view>
+        <image src='../../images/explain-pic.jpg' />
+      </view>
+      <view class='from-box'>
+        <view>
+          <text>普通</text>
+          <text>无</text>
+        </view>
+        <view>
+          <text>银卡</text>
+          <text>0</text>
+        </view>
+        <view>
+          <text>金卡</text>
+          <text>4000</text>
+        </view>
+        <view>
+          <text>铂金卡</text>
+          <text>10000</text>
+        </view>
+      </view>
+    </view>
+    <view class='main-title'>• 会员级别具体内容如下：</view>
+    <view class='main-text'>
+      <view class='main-li'>
+        <text>会员等级</text>
+        <text>会员等级说明</text>
+        <text>等级有效</text>
+      </view>
+      <view class='main-li'>
+        <text>普通</text>
+        <text>已注册但未消费的会员</text>
+        <text>永久有效</text>
+      </view>
+      <view class='main-li'>
+        <text>银卡</text>
+        <text>成长值在指定0-3999（含）的会员</text>
+        <text>1年有效期，1年后扣除500成长值</text>
+      </view>
+      <view class='main-li'>
+        <text>金卡</text>
+        <text>成长值在指定4000-9999（含）的会员</text>
+        <text>1年有效期，1年后扣除1000成长值</text>
+      </view>
+      <view class='main-li'>
+        <text>铂金卡</text>
+        <text>成长值10000（含）以上的会员</text>
+        <text>1年有效期，1年后扣除1500成长值</text>
+      </view>
+    </view>
+  </view>
+  <!--成长值  -->
+  <view class='main' wx:if='{{nav[1].className}}'>
+    <view class='main-title'>
+      • 什么是成长值
+    </view>
+    <view class='main-text'>
+      <view>成长值是会员通过购买行为,参加任务时获得的福利回馈,购买金额越高、购买频率越高获得的成长值越多，更易达到高等级，享受更多特权。</view>
+    </view>
+    <view class='main-title'>
+      • 成长值计算说明
+    </view>
+    <view class='main-text'>
+      <view>1.线下消费:购买商品计算成长值，门店购买香烟、促销商品不增加成长值；</view>
+      <view>2.线上消费:在柏源超市小程序，进行商品购买均会进行成长值计算；</view>
+      <view>3.购买商品计算成长值时，只计算会员使用现金、银行卡、微信、支付宝等实际支付金额，积分支付不计算成长值；</view>
+    </view>
+    <view class='main-title'>
+      • 成长值扣减
+    </view>
+    <view class='main-text'>
+      <view>1.订单完成后产生退货时，按该笔订单产生的成长值扣减，重新根据订单实际支付金额计算成长值；</view>
+      <view>2.会员级别有效期截止时，会根据级别扣减相应的成长值，详细请见会员等级说明。</view>
+    </view>
+  </view>
+  <!--积分  -->
+  <view class='main' wx:if='{{nav[2].className}}'>
+    <view class='main-title'>• 什么是积分</view>
+    <view class='main-text'>
+      <view>
+        积分是会员在实体门店购物消费或者线上完成指定行为的福利。积分可以直接用于支付，积分和现金抵扣的比例为100：1，即1元=100积分。
+      </view>
+
+    </view>
+    <view class='main-title'>• 如何获得积分</view>
+    <view class='main-text'>
+      <view>
+        购物等消费行为，订单评价，会员签到等任务都可获得相应积分。
+      </view>
+    </view>
+    <view class='main-title'>• 如何使用积分</view>
+    <view class='main-text'>
+      <view>
+        在门店或线上消费时选择积分支付，即可减免相应付款金额。
+      </view>
+    </view>
+    <view class='main-title'>• 积分扣减</view>
+    <view class='main-text'>
+      <view>
+        1.如发生退货，系统将扣除获得的积分，重新计算；
+      </view>
+      <view>
+        2.如发现会员在参与任务过程中存在舞弊、违规等行为时，将扣除该任务获得的积分；
+      </view>
+    </view>
+  </view>
+</view>

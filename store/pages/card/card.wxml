@@ -1,0 +1,47 @@
+<!--pages/card/card.wxml-->
+<view class='content'>
+   <view class='rule'>
+    <view bindtap='showRule'>使用规则</view>
+   </view>
+   <view class='card'>
+      <image src='../../images/boyuanlogo.png'/>
+      <view class='card-main'>
+        <view class='title'>柏源实体卡</view>
+        <view class='money'>总余额 ¥<text>{{}}</text></view>
+        <view class='bottom'>
+          <text>在线充值So Easy</text>
+          <button bindtap='navRecharge'>去充值</button>
+        </view>
+      </view>
+   </view>
+   <view class='card'>
+      <image src='../../images/boyuanlogo.png'/>
+      <view class='card-main'>
+        <view class='title'>柏源虚拟卡</view>
+        <view class='money'>总余额 ¥<text>{{}}</text></view>
+        <view class='bottom'>
+          <text>在线充值So Easy</text>
+          <button>去充值</button>
+        </view>
+      </view>
+   </view>
+</view>
+<view class='blackBg' wx:if='{{popupShow}}'></view>
+<view class='popup' wx:if='{{popupShow}}'>
+  <view class='title'>使用说明</view>
+  <view class='popupText'>
+    <view class='popupTextTitle'>1.卡包展示的卡类型</view>
+    <view>柏源购物卡</view>
+    <view>柏源虚拟卡</view>
+    <view class='popupTextTitle'>2.柏源卡充值/绑定</view>
+    <view>在线充值：可在活动也或点击“卡包-去充值”入口进行柏源卡充值，充值成功后柏源卡将增加相应的金额</view>
+    <view>绑定：打卡“我的-卡包-柏源实体卡”页面，输入16位卡密进行绑定</view>
+    <view class='popupTextTitle'>3.如何使用</view>
+    <view>柏源实体卡：可用于支付线上订单，也可在实体店扫码支付</view>
+    <view>柏源虚拟卡：可用于支付线上订单</view>
+    <view class='popupTextTitle'>3.注意事项</view>
+    <view>最终解释权归柏源和超市所有，如需了解详情可至对应线下门店或联系柏源客服咨询</view>
+    <view>柏源虚拟卡：可用于支付线上订单</view>
+  </view>
+  <button class='bottomBtn' hover-class='bottomBtnActive' bindtap='popupHide'>知道啦</button>
+</view>

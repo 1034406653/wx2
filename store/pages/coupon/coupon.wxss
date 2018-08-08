@@ -1,0 +1,158 @@
+/* pages/coupon/coupon.wxss */
+.rule{
+  width: 100%;
+  height: 66rpx;
+}
+.rule view{
+  float: right;
+  width: 140rpx;
+  text-align: center;
+  line-height: 66rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+.couponAllCan,.couponDiscount{
+  width: 100%;
+  height:218rpx; 
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  position: relative;
+  overflow: hidden;
+}
+.couponAllCan>image,.couponDiscount>image{
+  width: 100%;
+  height: 100%;
+}
+.coupon-main{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height:218rpx; 
+  padding: 0 20rpx;
+  overflow: hidden;
+}
+.coupon-left{
+  float: left;
+  width: 218rpx;
+  height: 218rpx;
+}
+.coupon-left .restrict{
+  width: 100%;
+  height: 70rpx;
+  line-height: 50rpx;
+  color: #666;
+  font-size: 28rpx;
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+}
+.coupon-left .num{
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  color: #f66800;
+  font-size: 38rpx;
+  text-align: center;
+}
+.coupon-left .num text{
+  font-size: 60rpx;
+}
+.coupon-left .countDown{
+  width: 120rpx;
+  height: 28rpx;
+  background: #f66800;
+  font-size: 22rpx;
+  line-height: 28rpx;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+.coupon-right{
+  float: left;
+  width: 480rpx;
+  height: 218rpx;
+  padding-left: 30rpx;
+}
+.coupon-right .title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+.coupon-right .text{
+  width: 100%;
+  height: 72rpx;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+}
+.coupon-right .time{
+  width: 100%;
+  height: 34rpx;
+  line-height: 34rpx;
+  color: #999;
+  overflow: hidden;
+  font-size: 24rpx;
+}
+.navGoodList{
+  position: absolute;
+  width: 68rpx;
+  height: 218rpx;
+  right: 20rpx;
+  top: 0;
+  color: #eef9d1;
+  line-height: 34rpx;
+  padding: 48rpx 13rpx 0 13rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+/*使用规则弹窗  */
+.popup{
+  position: absolute;
+  left: 50%;
+  margin-left: -300rpx;
+  width: 600rpx;
+  height: auto;
+  background: #fff;
+  z-index: 1001;
+  border-radius: 12rpx;
+  top: 180rpx;
+  overflow: hidden;
+  padding-bottom: 30rpx
+}
+.popup .title{
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  color: #333;
+  font-size: 28rpx;
+  text-align: center;
+  background: #fafafa;
+  border-bottom:2rpx solid #dedede; 
+}
+.popupText{
+  width: 100%;
+  height: auto;
+  padding: 30rpx 42rpx;
+  line-height: 36rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+.bottomBtn{
+  width: 310rpx;
+  margin: 0 auto;
+  height: 66rpx;
+  line-height: 62rpx;
+  color: #f28044;
+  font-size: 28rpx;
+  text-align: center;
+  border: 2rpx solid #f28044;
+  border-radius: 10rpx;
+  background: transparent;
+}
+.bottomBtnActive{
+  background: #dedede;
+}

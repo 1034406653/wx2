@@ -1,0 +1,73 @@
+<!--pages/pay/pay.wxml-->
+<view class='content'>
+  <!--倒计时  -->
+  <view class='time'>
+  请在<text class='hour'>{{countdown.hour}}</text>:<text class='minute'>{{countdown.minute}}</text>:<text class='second'>{{countdown.second}}</text>秒内付款，超时订单将自动取消
+  </view>
+  <!--取货方式选择  -->
+  <view class='select-box'>
+    <view class='{{adress2Active}}' bindtap='selectAddress2'>自提</view>
+    <view class='{{adressActive}}' bindtap='selectAddress'>物流</view>
+  </view>
+  <!--物流  -->
+  <view class='adress' wx:if='{{adress}}' bindtap='navSelectAdress'>
+    <view class='adress-left'>送货地址</view>
+    <view class='adress-center'>
+      <view class='adress-center-top'>
+        <text>{{adres.peopleName}}</text><text>{{adres.phone}}</text>
+      </view>
+      <view class='adress-center-bottom'>{{adres.region[0]}}{{adres.region[1]}}{{adres.region[2]}}{{adres.detailAdress}}</view>
+    </view>
+    <image src='../../images/next.png' class='adress-right'></image>
+  </view>
+  <!--自提  -->
+  <view class='adress2' wx:if='{{!adress}}'>
+    <view class='peopleName'>
+      <view class='adress2-left'>收货人</view>
+      <input  placeholder='请输入收货人姓名'/>
+    </view>
+    <view class='phone'>
+      <view class='adress2-left'>收货人</view>
+      <input  placeholder='请输入收货人手机号'/>
+    </view>
+    <view class='selectStore'>
+      <view class='adress2-left'>门店选择</view>
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            当前选择：{{array[index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <image src='../../images/borde.jpg' class='borde'></image>
+  <view class='message'>
+    <view class='message-left'>留言</view>
+    <input placeholder='给卖家留言'/>
+  </view>
+  <view class='orders'>
+   <view class='orders-top'>订单明细</view>
+   <view class='order-li' wx:for='{{orders}}' wx:key='index' wx:for-item='order'>
+    <image src='{{order.imgUrl}}'/>
+    <view class='text'>{{order.text}}</view>
+    <view class='order-right'>
+      <text class='price'>¥{{order.price}}</text>
+      <text class='num'>x{{order.buyNum}}</text>
+    </view>
+   </view>
+   <view class='orders-bottom'>
+   <text>实付</text>
+   <text class='totalPrice'>¥{{totalMoney}}</text>
+   </view>
+  </view>
+  <view class='payMethod'>
+    <image src='../../images/wx-icon.png'/>
+    <view class='payMethod-center'>
+      <view>微信支付</view>
+      <view>推荐微信用户使用</view>
+    </view>
+    <icon size='24' color='#ad5851' type='success'></icon>
+  </view>
+  <button stype="default" hover-class='btn-active'>支付 ¥{{totalMoney}}</button>
+</view>
