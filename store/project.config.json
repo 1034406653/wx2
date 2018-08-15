@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
 	"appid": "wxe6611e04cd0eaeae",
-	"projectname": "store",
+	"projectname": "WXstore",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
